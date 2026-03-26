@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -10,7 +11,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(padding: const EdgeInsets.all(4.0), child: CircleAvatar(backgroundImage: NetworkImage('https://content.emarket.pe/common/collections/standard/e6/c7/e6c7d2be-59e7-481c-aa7a-096185770e8e.jpg'),)),
-        title: const Text('CHAT SCREEN'),
+        title: const Text('POKEMON'),
       ),
       body: _Chatview(),
     );
@@ -38,6 +39,7 @@ class _Chatview extends StatelessWidget {
               )
                 
             ),
+            const MessageFieldBox(),
           ],
         ),
       ),
